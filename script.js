@@ -19,7 +19,7 @@ const getJoke = async()=>{
 
 btnSubmit.addEventListener("click", e=>{
     e.preventDefault();
-    getJoke();
+    //getJoke();
 });
 
 btnSubmit.addEventListener("mousedown", e=>{
@@ -37,9 +37,11 @@ btnSubmit.addEventListener("mouseup", ()=>{
     btnSubmit.style.boxShadow = "5px 5px 12px 0px rgba(0,0,0,0.59)";
     btnSubmit.style.backgroundColor="#03071e";
     btnSubmit.style.color="#FCE130";
+    getJoke();
 })
 btnSubmit.addEventListener("touchend", ()=>{
     btnSubmit.style.boxShadow = "5px 5px 12px 0px rgba(0,0,0,0.59)";
     btnSubmit.style.backgroundColor="#03071e";
     btnSubmit.style.color="#FCE130";
+    getJoke();
 })
