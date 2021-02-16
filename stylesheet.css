@@ -10,7 +10,7 @@ body{
 }
 
 .container{
-    position: fixed;
+    position: relative;
     top:0;
     bottom:0;
     left:0;
@@ -26,10 +26,11 @@ body{
     color: black;
 }
 
+
 .item h1{
     min-width: 100%;
     text-align: center;
-    position: fixed;
+    position: absolute;
     top: 3rem;
     margin-left: auto;
     margin-right: auto;
