@@ -12,7 +12,7 @@ const getJoke = async()=>{
         const res = await axios.get('https://icanhazdadjoke.com/', config);
         jokeContainer.innerHTML = res.data.joke;
     } catch (error) {
-        jokeContainer.innerHTML = "Sorry, something went wrong.";
+        jokeContainer.innerHTML = "Sorry, something went wrong. Please try again later.";
         console.log(error);
     }
 }
@@ -28,6 +28,7 @@ btnSubmit.addEventListener("mousedown", e=>{
     btnSubmit.style.color="#BAAA43";
 });
 btnSubmit.addEventListener("touchstart", e=>{
+    e.stopPropagation();
     btnSubmit.style.boxShadow = "inset 9px 9px 20px 7px #000000";
     btnSubmit.style.backgroundColor="#131838";
     btnSubmit.style.color="#BAAA43";
