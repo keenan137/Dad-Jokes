@@ -17,32 +17,35 @@ const getJoke = async()=>{
     }
 }
 
-btnSubmit.addEventListener("click", e=>{
+
+btnSubmit.addEventListener("touchstart", e=>{
     e.preventDefault();
-    //getJoke();
+    e.stopPropagation();
+    btnSubmit.style.boxShadow = "inset 9px 9px 20px 7px #000000";
+    btnSubmit.style.backgroundColor="#131838";
+    btnSubmit.style.color="#BAAA43";
 });
+btnSubmit.addEventListener("touchend", e=>{
+    e.preventDefault();
+    btnSubmit.style.boxShadow = "5px 5px 12px 0px rgba(0,0,0,0.59)";
+    btnSubmit.style.backgroundColor="#03071e";
+    btnSubmit.style.color="#FCE130";
+    getJoke();
+})
 
 btnSubmit.addEventListener("mousedown", e=>{
     btnSubmit.style.boxShadow = "inset 9px 9px 20px 7px #000000";
     btnSubmit.style.backgroundColor="#131838";
     btnSubmit.style.color="#BAAA43";
 });
-btnSubmit.addEventListener("touchstart", e=>{
-    e.stopPropagation();
-    btnSubmit.style.boxShadow = "inset 9px 9px 20px 7px #000000";
-    btnSubmit.style.backgroundColor="#131838";
-    btnSubmit.style.color="#BAAA43";
+btnSubmit.addEventListener("mouseup", e=>{
+    btnSubmit.style.boxShadow = "5px 5px 12px 0px rgba(0,0,0,0.59)";
+    btnSubmit.style.backgroundColor="#03071e";
+    btnSubmit.style.color="#FCE130";
+    getJoke();
+})
+
+btnSubmit.addEventListener("click", e=>{
+    e.preventDefault();
 });
 
-btnSubmit.addEventListener("mouseup", ()=>{
-    btnSubmit.style.boxShadow = "5px 5px 12px 0px rgba(0,0,0,0.59)";
-    btnSubmit.style.backgroundColor="#03071e";
-    btnSubmit.style.color="#FCE130";
-    getJoke();
-})
-btnSubmit.addEventListener("touchend", ()=>{
-    btnSubmit.style.boxShadow = "5px 5px 12px 0px rgba(0,0,0,0.59)";
-    btnSubmit.style.backgroundColor="#03071e";
-    btnSubmit.style.color="#FCE130";
-    getJoke();
-})
