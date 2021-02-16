@@ -44,6 +44,8 @@ button{
     padding: 0.6rem 2rem;
     background-color: #03071e;
     color: #FCE130;
+
+    letter-spacing: 0.1rem;
 }
 
 button:focus{
